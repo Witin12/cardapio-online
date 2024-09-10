@@ -149,6 +149,7 @@ btnCheckout.addEventListener("click", function () {
                 background: "#ef4444",
             },
         }).showToast();
+        return;
     }
 
     if (cart.length === 0) return;
@@ -169,7 +170,7 @@ btnCheckout.addEventListener("click", function () {
     }).join("")
 
     const message = encodeURIComponent(cartItems);
-    const phone = "14991958891";
+    const phone = "14999999999";
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
@@ -181,7 +182,7 @@ btnCheckout.addEventListener("click", function () {
 function checkOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 17 && hora < 22;
+    return hora >= 9 && hora < 17;
 }
 
 const spanItem = document.getElementById("data-span");
